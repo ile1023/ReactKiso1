@@ -1,0 +1,32 @@
+.thread-list{
+    display: flex;              
+    flex-direction: column;      
+    align-items: center; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.thread-item{
+    
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 300px;
+}
+
+.thread-item:hover{
+    background-color: #f0f0f0;
+}
+
+.thread-button{
+    background: none;
+    border: none;
+    color: #3B2A19;
+    cursor: pointer;
+}
