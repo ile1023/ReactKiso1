@@ -1,9 +1,19 @@
+import {Routes, Route} from 'react-router-dom';
 import './App.css';
+import Header from './Header.jsx';
+import ThreadList from './ThreadList.jsx';
+import NewThread from './NewThread.jsx'
+
 
 function App() {
   return (
     <div>
-      <p>新着スレッド</p>
+      
+      <Header />
+      <Routes>
+        <Route path='/' element={<ThreadList />}/>
+        <Route path='/threads/new' element={<NewThread />} />
+      </Routes>
     </div>
     
   );

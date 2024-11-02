@@ -17,6 +17,7 @@ function ThreadList(){
     },[]);
     return(
         <div>
+            <p>新着スレッド</p>
             <ul className='thread-list'>
                 {threads.map((thread) => (
                     <li key={thread.id} className='thread-item'>

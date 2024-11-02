@@ -1,0 +1,20 @@
+.NewThread{
+    font-family: "Kaisei Opti", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;               /* フレックスボックスを使用 */
+    flex-direction: column;      /* 縦方向に配置 */
+    align-items: center;         /* 子要素を中央揃え */
+}
+
+.title {
+    display: flex;           /* フレックスボックスを使用 */
+    flex-direction: column;  /* 縦方向に配置 */
+    margin-bottom: 20px;    
+    align-items: center; /* 下のスペースを確保 */
+}
+
+button{
+    background: none;
+    cursor: pointer;
+}

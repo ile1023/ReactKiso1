@@ -1,3 +1,10 @@
+p{
+    text-align: center;
+    font-family: "Kaisei Opti", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .thread-list{
     display: flex;              
     flex-direction: column;      
