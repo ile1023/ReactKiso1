@@ -11,6 +11,9 @@ function ThreadList(){
             .then((data) => {
                 setThreads(data);
             })
+            .catch((error) => {
+                console.error("エラーです", error);
+            })
             
             };
         fecthThreads();

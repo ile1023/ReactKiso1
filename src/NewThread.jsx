@@ -22,6 +22,9 @@ function NewThread ()  {
                     alert('スレッドが作成されました！');
                 }
             })
+            .catch((error) => {
+                console.error("エラーです", error);
+            })
         }
        
     
