@@ -3,7 +3,7 @@ import './ThreadList.css'
 function ThreadList(){
     const [threads, setThreads] = useState([]);
     useEffect(() => {
-        const fecthThreads = () => {
+        const fetchThreads = () => {
             fetch('https://railway.bulletinboard.techtrain.dev/threads')
             .then((response) => {
                 return response.json();
@@ -16,7 +16,7 @@ function ThreadList(){
             })
             
             };
-        fecthThreads();
+        fetchThreads();
     },[]);
     return(
         <div>
