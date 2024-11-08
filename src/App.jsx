@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header.jsx';
 import ThreadList from './ThreadList.jsx';
 import NewThread from './NewThread.jsx'
+import ThreadContents from './ThreadContents.jsx'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ThreadList />}/>
         <Route path='/threads/new' element={<NewThread />} />
+        <Route path='/threads/:thread_id' element={<ThreadContents />} />
       </Routes>
     </div>
     
