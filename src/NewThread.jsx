@@ -7,24 +7,24 @@ function NewThread ()  {
         const handleTitleChange = (e) => {
             setTitle(e.target.value);
         };
-        const handleSubmit = (e) => {
+        const handleSubmit = async (e) => {
             e.preventDefault();
             if(!title) return;
-
-            fetch('https://railway.bulletinboard.techtrain.dev/threads', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({title}),
-            })
-            .then(response => {
+            try {
+                const response =  await fetch('https://railway.bulletinboard.techtrain.dev/threads', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({title}),
+                })
                 if(response.ok){
                     setTitle('');
                     alert('スレッドが作成されました！');
                 }
-            })
-            .catch((error) => {
+    
+            } catch (error) {
                 console.error("エラーです", error);
-            })
+            }
+           
         }
        
     
