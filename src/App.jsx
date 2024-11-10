@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ThreadList />}/>
         <Route path='/threads/new' element={<NewThread />} />
-        <Route path='/threads/:thread_id' element={<ThreadContents />} />
+        <Route path='/threads/:threadId' element={<ThreadContents />} />
       </Routes>
     </div>
     
