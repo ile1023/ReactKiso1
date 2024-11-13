@@ -61,9 +61,15 @@ function ThreadContents(){
 
     if (loading) return <p>読み込み中...</p>;
     return(
-        
-
         <div className='ThreadContents'>
+            <form onSubmit={NewPostSubmit}>
+                <input
+                    type='text'
+                    value={newPost}
+                    onChange={(e) => setNewPost(e.target.value)}
+                />
+                <button type='submit'>投稿</button>
+            </form>
             <ul className='postList'>
                 {posts.length > 0 ? (
                     posts.map(post => (
@@ -76,15 +82,7 @@ function ThreadContents(){
                  )}
             </ul>
 
-            <form onSubmit={NewPostSubmit}>
-                <textarea
-                 value={newPost}
-                 onChange={(e) => setNewPost(e.target.value)}
-                 placeholder='新しい投稿を入力してください'
-                 required
-                 />
-                <button type='submit' disabled={loading}>投稿する</button>
-            </form>
+            
         </div>
     );
 }
